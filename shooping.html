@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #f2f2f2;
+        }
+
+        /* Header Section */
+        header {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff6f61, #ff9f43);
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            animation: fadeInUp 2s ease-out forwards;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeInUp 2s ease-out 0.5s forwards;
+        }
+
+        /* Button for "Get Started" */
+        .cta-btn {
+            padding: 15px 30px;
+            background-color: #ff4e50;
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Scroll Down Arrow Animation */
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(15px);
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Card Layout */
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 30%;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Base Button Style */
+.shop-now-btn {
+    padding: 15px 40px;
+    background-color: transparent;  /* Transparent background */
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #ff4e50; /* Red border */
+    border-radius: 30px; /* Rounded corners */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Hover Effect */
+.shop-now-btn:hover {
+    color: #fffdff; /* White text on hover */
+    background-color: #1636c2; /* Red background on hover */
+    border-color: #ff9f43; /* Yellow border color on hover */
+    transform: translateY(-4px); /* Slightly raised on hover */
+}
+
+/* Focus Effect (when clicked or focused) */
+.shop-now-btn:focus {
+    border-color: #ff9f43;
+    outline: none; /* Remove default outline */
+}
+
+/* Active/Pressed Effect */
+.shop-now-btn:active {
+    transform: translateY(2px); /* Button appears pressed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly softer shadow */
+}
+
+/* Smooth Fade-In Effect */
+.shop-now-btn {
+    animation: fadeIn 0.8s ease-out; /* Fade-in effect when the button loads */
+}
+
+/* Keyframe for Fade-In Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9); /* Start small */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h1>Marina Trend Online Shooping Nepal</h1>
+            </h1>
+            <h2>Welcome to Our Site</h2>
+            <p>Your journey to greatness begins here.</p>
+            <button onclick="window.location.href='index.html';" class="shop-now-btn">Shop Now</button>
+            <div class="scroll-down">
+                <span>&#8595;</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- First Section -->
+    <section id="section-1">
+        <h2>About Us</h2>
+        <p>We are a company that offers the best products and services to help you succeed. Explore our wide range of offerings and take your experience to the next level!</p>
+    </section>
+
+    <!-- Card Section -->
+    <section>
+        <h2>Our Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x250" alt="Service 1">
+                <h3>Service 1</h3>
+                <p>Our first service offers a wide variety of options to suit your needs and goals.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x250" alt="Service 2">
+                <h3>Service 2</h3>
+                <p>This service is designed to help you achieve the best results with minimal effort.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x250" alt="Service 3">
+                <h3>Service 3</h3>
+                <p>We provide expert-level service for every client, no matter the size of the project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 marina trend Company | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+
+</body>
+</html>

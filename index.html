@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping - Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Online Store</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <div class="product-card" onclick="showDetails(1)">
+                <img src="https://raw.githubusercontent.com/marinatrendy/shooping/refs/heads/main/pro%201-1.jpg" alt="Product 1">
+                <h3>Kurti set</h3>
+                <p>Rs.1400</p>
+                <button class="view-details">View Details</button>
+            </div>
+            <section class="product-list">
+                <div class="product-card" onclick="showDetails(2)">
+                    <img src="https://raw.githubusercontent.com/marinatrendy/shooping/refs/heads/main/p2-1.jpg" alt="Product 2">
+                    <h3>kurti set</h3>
+                    <p>Rs.1400</p>
+                    <button class="view-details">View Details</button>
+                </div>
+                <section class="product-list">
+                    <div class="product-card" onclick="showDetails(3)">
+                        <img src="https://raw.githubusercontent.com/marinatrendy/shooping/refs/heads/main/p3-1.jpg" alt="Product 3">
+                        <h3>skirt</h3>
+                        <p>Rs.800</p>
+                        <button class="view-details">View Details</button>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(4)">
+                            <img src="https://raw.githubusercontent.com/marinatrendy/shooping/refs/heads/main/p4-1.jpg" alt="Product 4">
+                            <h3>long skirt</h3>
+                            <p>Rs.950</p>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(5)">
+                            <img src="https://raw.githubusercontent.com/marinatrendy/shooping/refs/heads/main/p5-1.jpg" alt="Product 5">
+                            <h3>Baggy paint</h3>
+                            <p>Rs.1200</p>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(6)">
+                            <img src="https://raw.githubusercontent.com/marinatrendy/shooping/refs/heads/main/p6-1.jpg" alt="Product 6">
+                            <h3>kurti set</h3>
+                            <p>Rs.1300</p>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(7)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(8)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(9)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(10)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(11)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(12)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(13)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                    <section class="product-list">
+                        <div class="product-card" onclick="showDetails(14)">
+                            <img src="" alt="Product 1">
+                            <h3>Product Name 4</h3>
+                            <button class="view-details">View Details</button>
+                        </div>
+            <!-- Repeat this block for each product -->
+        </section>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="product-detail-content">
+                <!-- Product details will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+          <p class="footer-company">Company Name</p>
+          <p class="footer-rights">© 2025 All Rights Reserved | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a></p>
+          <p class="footer-upcoming">Stay Tuned! More products are coming soon.</p>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
